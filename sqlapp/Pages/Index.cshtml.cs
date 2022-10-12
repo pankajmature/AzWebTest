@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using sqlapp.Models;
-using sqlapp.Services;
 
-namespace AzWebTest.Pages
+namespace sqlapp.Pages
 {
     public class IndexModel : PageModel
     {
@@ -13,11 +11,9 @@ namespace AzWebTest.Pages
             _logger = logger;
         }
 
-        public List<Product> ProductList = new();
         public void OnGet()
         {
-            ProductService productService = new();
-            ProductList = productService.GetProducts();
+
         }
     }
 }
